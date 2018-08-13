@@ -36,4 +36,8 @@
       * 핵심기술
         * [A-Priori 알고리즘](https://github.com/JunilHwang/webskills/blob/2018_%EC%A0%84%EA%B5%AD/su/4_20180711/application/core/RelatedSearch.php)
         * [분기와한정 - Shortest Path](https://github.com/JunilHwang/webskills/blob/2018_%EC%A0%84%EA%B5%AD/su/4_20180711/application/core/Shortest.php)
+  * 광주
+  	* [2과제](https://github.com/JunilHwang/webskills/tree/2018_%EC%A0%84%EA%B5%AD/kj/2)
+  	* [3과제](https://github.com/JunilHwang/webskills/tree/2018_%EC%A0%84%EA%B5%AD/kj/3)
+  	* [4과제](https://github.com/JunilHwang/webskills/tree/2018_%EC%A0%84%EA%B5%AD/kj/4)
 ***
