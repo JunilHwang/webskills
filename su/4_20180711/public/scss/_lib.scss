@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// variable
+$font:"NanumBarunGothic","Nanum Barun Gothic";
+$color-main:#34495e;
+$color-blue:#09f;
+$color-sub:#e50100;
+
+// library
+@mixin clr() {
+	&:after{content:"";display:block;clear:both}
+}

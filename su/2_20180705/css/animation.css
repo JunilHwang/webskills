@@ -1,0 +1,76 @@
+@keyframes slide1 {
+	100%, 0%, 12% {margin-left:0;}
+	25%, 37% {margin-left:-100%;}
+	50%,62% {margin-left:-200%;}
+	75%, 87% {margin-left:-300%;}
+}
+@keyframes slide2 {
+	100%, 0%, 12% {margin-left:-100%;}
+	25%, 37% {margin-left:-200%;}
+	50%, 62% {margin-left:-300%;}
+	75%, 87% {margin-left:0;}
+}
+@keyframes slide3 {
+	100%, 0%, 12% {margin-left:-200%;}
+	25%, 37% {margin-left:-300%;}
+	50%, 62% {margin-left:0;}
+	75%, 87% {margin-left:-100%;}
+}
+@keyframes slide4 {
+	100%, 0%, 12% {margin-left:-300%;}
+	25%, 37% {margin-left:0;}
+	50%, 62% {margin-left:-100%;}
+	75%, 87% {margin-left:-200%;}
+}
+@keyframes pos1 {
+	100%, 0%, 12% {width:40px;background:#f8cb25;}
+	25%, 37% {width:20px;background:#fff;}
+	50%,62% {width:20px;background:#fff;}
+	75%, 87% {width:20px;background:#fff;}
+}
+@keyframes pos2 {
+	100%, 0%, 12% {width:20px;background:#fff;}
+	25%, 37% {width:40px;background:#f8cb25;}
+	50%,62% {width:20px;background:#fff;}
+	75%, 87% {width:20px;background:#fff;}
+}
+@keyframes pos3 {
+	100%, 0%, 12% {width:20px;background:#fff;}
+	25%, 37% {width:20px;background:#fff;}
+	50%,62% {width:40px;background:#f8cb25;}
+	75%, 87% {width:20px;background:#fff;}
+}
+@keyframes pos4 {
+	100%, 0%, 12% {width:20px;background:#fff;}
+	25%, 37% {width:20px;background:#fff;}
+	50%,62% {width:20px;background:#fff;}
+	75%, 87% {width:40px;background:#f8cb25;}
+}
+@keyframes arrow1 {
+	100%, 0%, 24% {z-index:40;}
+	25%, 49% {z-index:0;}
+	50%, 74% {z-index:0;}
+	75%, 99% {z-index:0;}
+}
+@keyframes arrow2 {
+	100%, 0%, 24% {z-index:0;}
+	25%, 49% {z-index:40;}
+	50%, 74% {z-index:0;}
+	75%, 99% {z-index:0;}
+}
+@keyframes arrow3 {
+	100%, 0%, 24% {z-index:0;}
+	25%, 49% {z-index:0;}
+	50%, 74% {z-index:40;}
+	75%, 99% {z-index:0;}
+}
+@keyframes arrow4 {
+	100%, 0%, 24% {z-index:0;}
+	25%, 49% {z-index:0;}
+	50%, 74% {z-index:0;}
+	75%, 99% {z-index:40;}
+}
+@keyframes open {
+	from {opacity:0;}
+	to {opacity:1;}
+}

@@ -1,0 +1,143 @@
+nav .sidenav-trigger {
+	margin: 0px;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+section#main {
+	flex: 1 0 auto;
+}
+
+button i {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -3px;
+}
+
+.input-field.padding {
+	width: calc(100% - 30px);
+	margin: 1rem 15px;
+}
+.sidenav .user-view {
+	padding: 38px 38px 0px;
+}
+.sidenav .user-view .email {
+	padding-bottom: 8px;
+}
+.sidenav .user-view .background img
+{
+	width: 100%;
+}
+.modal-footer.input-field {
+	padding: 0px 24px;
+	margin: 0px;
+}
+
+.card > .card-image {
+	height: 200px;
+}
+.card > .card-image > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.card > .card-content > p {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.collection-item > .material-icons {
+	float: left;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	padding-right: 10px;
+}
+
+.codeview {
+	width: 100%;
+	min-height: 250px;
+}
+.codeview > .head {
+	padding: 0px 15px;
+	display: flex;
+	align-items: center;
+}
+.codeview .title {
+	font-size: 1.4rem;
+	line-height: 110%;
+	padding: 20px 0px;
+	margin: 0px;
+	display: inline-block;
+	font-weight: normal;
+}
+.codeview .card-content {
+	word-break: break-all;
+}
+.codeview > .head .blank {
+	flex: 1 0 auto;
+}
+a > .material-icons {
+	float: left;
+}
+a.btn > .material-icons {
+	margin-right: 5px;
+}
+a:not(.btn):not(.collection-item):not(.btn-floating):not(.not) > .material-icons {
+	float: left;
+	padding: 3px;
+}
+.collection.tab-content {
+	margin: 0px;
+}
+.projecttitle {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.card.manager-header {
+	width: 100%;
+	margin: 0px;
+	margin-bottom: 15px;
+	padding-top: 10px;
+}
+.collection-item > .title {
+	font-size: 1.2rem;
+}
+.btn_group {
+	padding: 8px 10px;
+}
+
+.insert {
+	background-color : rgba(0, 255, 0, 0.3) !important;
+}
+.delete {
+	background-color : rgba(255, 0, 0, 0.3) !important;
+}
+
+.fixed-footer {
+	display : flex;
+	flex-direction : column;
+}
+.fixed-footer .card-content {
+	 flex : 1 0 auto;
+}
+
+.btn_group.row {
+	margin : 0px;
+	display : flex;
+	align-items : center;
+}
+.btn_group.row > .arrow {
+	height : 100%;
+}
+a.collection-item {
+	color : #404040 !important;
+}
+
+.card > .collection {
+	border : none;
+}

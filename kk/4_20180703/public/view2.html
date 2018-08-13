@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project Manager</title>
+	<link rel="stylesheet" type="text/css" href="./materialize/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+</head>
+<body class="blue-grey lighten-5">
+
+	<!-- header -->
+	<nav class="blue lighten-2">
+		<!-- container -->
+		<div class="container">
+			<div class="nav-wrapper">
+
+				<!-- title -->
+				<a class="brand-logo center" href="index.html">project manager</a>
+
+				<!-- menu icon -->
+				<ul class="left">
+					<li data-target="sidenav" class="sidenav-trigger">
+						<a href="#" class="not"><i class="material-icons small">menu</i></a>
+					</li>
+				</ul>
+
+				<!-- navigation buttons -->
+				<ul class="right">
+					<li>
+						<a href="#">Logout</a>
+					</li>
+					<li>
+						<a href="login.html">Login</a>
+					</li>
+					<li>
+						<a href="join.html">Sign In</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- container -->
+	</nav>
+	<!-- header -->
+
+	<!-- main section -->
+	<section id="main">
+		<div class="card manager-header">
+			<div class="container">
+				<div class="projecttitle"><a href="view.html">user1/project manager example</a></div>
+				<p>this is project manager example</p>
+			</div>
+			<div class="divider"></div>
+			<div class="container">
+				<ul class="tabs row">
+					<li class="tab col"><a href="#code">code</a></li>
+					<li class="tab col"><a href="#version">versions</a></li>
+					<li class="tab col"><a href="#compare">Compare</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+
+			<div id="code">
+				<div class="card">
+
+					<div class="codeview">
+
+						<div class="head">
+							<div class="title">\text.txt</div>
+							<div class="blank"></div>
+							<a class="grey-text waves-effect waves-red" href="#"><i class="material-icons">delete</i></a>
+						</div>
+
+						<div class="divider"></div>
+
+						<div class="card-content">
+							this is content of text.txt <br>
+							this is content of text.txt <br>
+							this is content of text.txt
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div id="version">
+				<div class="card">
+
+					<div class="collection tab-content">
+						<div class="collection-item">
+							<a class="title" href="#">project manager example3</a>
+							<div>this is project manager example3</div>
+						</div>
+						<div class="collection-item">
+							<a class="title" href="#">project manager example2</a>
+							<div>this is project manager example2</div>
+						</div>
+						<div class="collection-item">
+							<a class="title" href="#">project manager example1</a>
+							<div>this is project manager example1</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="compare">
+				<div class="card">
+
+					<div class="btn_group row">
+
+						<div class="col select">
+							<select>
+								<option disabled>choose</option>
+								<option>example3</option>
+								<option>example2</option>
+								<option selected>example1</option>
+							</select>								
+						</div>
+
+						<div class="col arrow">
+							<span class="material-icons">chevron_right</span>
+						</div>
+
+						<div class="col select">
+							<select>
+								<option disabled>choose</option>
+								<option selected>cuerrent</option>
+								<option>example3</option>
+								<option>example2</option>
+							</select>							
+						</div>
+
+						<div class="col">
+							<div class="btn">compare</div>
+						</div>
+
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="collection tab-content">
+						
+						<a class="collection-item" href="#">..</a>
+
+						<a class="collection-item" href="#">
+							<i class="material-icons">folder</i>folder1
+						</a>
+
+						<a class="collection-item insert" href="#">
+							<i class="material-icons">folder</i>folder2
+						</a>
+
+						<a class="collection-item" href="view2.html">
+							<i class="material-icons">insert_drive_file</i>file1.txt
+						</a>
+
+						<a class="collection-item delete" href="view2.html">
+							<i class="material-icons">insert_drive_file</i>file.txt
+						</a>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- tab contents -->
+		</div>
+	</section>
+	<!-- main section -->
+
+	<!-- commit form -->
+	<form id="commit" class="modal">
+		<div class="modal-content">
+			<h4>Commit</h4>
+			<p>&nbsp;</p>
+			<div class="input-field">
+				<input type="text" id="title" name="title" autocomplete="off" required>
+				<label for="title">title</label>
+			</div>
+			<div class="input-field">
+				<input type="text" id="description" name="description" autocomplete="off" required>
+				<label for="description">description</label>
+			</div>
+		</div>
+		<div class="modal-footer input-field">
+			<button href="#!" class="modal-action waves-effect waves-green btn-flat">Submit</button>
+		</div>
+	</form>
+	<!-- commit form -->
+
+	<!-- upload form -->
+	<form id="upload" class="modal" action="upload.html">
+		<div class="modal-content">
+			<h4>Upload</h4>
+			<p>&nbsp;</p>
+			<div class="file-field input-field">
+				<div class="btn">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<input type="file" name="file" required>
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="text">
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer input-field">
+			<button href="#!" class="modal-action waves-effect waves-green btn-flat">Upload</button>
+		</div>
+	</form>
+	<!-- upload form -->
+
+	<!-- footer -->
+	<footer class="page-footer blue lighten-2">
+		<!-- container -->
+		<div class="container">
+			<div class="row">
+				<div class="col m12">
+					<h5 class="white-text">Contact</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="#">Project@manager.net</a></li>
+						<li><a class="grey-text text-lighten-3" href="#">6501-0654</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<span class="left">Copyright 2018 ProjectManager All rights reserved.</span>
+				<span class="right">Powered By MaterializeCss</span>
+			</div>
+		</div>
+		<!-- container -->
+	</footer>
+	<!-- footer -->
+
+	<!-- side navigation -->
+	<ul id="sidenav" class="sidenav">
+		<li>
+			<div class="user-view">
+				<div class="background">
+					<img src="./images/user-back.png">
+				</div>
+				<a href="#user"><img class="circle" src="./images/user.png"></a>
+				<a href="#name"><span class="white-text name">user1</span></a>
+				<a href="#email"><span class="white-text email">user1@project.com</span></a>
+			</div>
+		</li>
+		<li>
+			<a href="#newproject" class="modal-trigger not"><i class="material-icons">add</i>New Project</a>
+		</li>
+	</ul>
+	<!-- side navigation -->
+
+	<!-- new project form -->
+	<form id="newproject" class="modal">
+		<div class="modal-content">
+			<h4>New Project</h4>
+			<p>&nbsp;</p>
+			<div class="input-field">
+				<input type="text" id="title" name="title" autocomplete="off" required>
+				<label for="title">title</label>
+			</div>
+			<div class="input-field">
+				<input type="text" id="description" name="description" autocomplete="off" required>
+				<label for="description">description</label>
+			</div>
+			<div class="file-field input-field">
+				<div class="btn">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<input type="file" name="project" required>
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="text">
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer input-field">
+			<button href="#!" class="modal-action waves-effect waves-green btn-flat">CREATE</button>
+		</div>
+	</form>
+	<!-- new project form -->
+
+	<script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>
