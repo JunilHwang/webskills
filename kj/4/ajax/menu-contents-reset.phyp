@@ -1,0 +1,4 @@
+<?php
+    include_once("../include/lib.php");
+
+    $pdo->query("update menu_set set c_type=0 where idx='{$_POST['idx']}'");
