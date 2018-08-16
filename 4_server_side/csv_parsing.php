@@ -2,11 +2,10 @@
 	$url = __DIR__."/csv/notebook.csv";
 
 	function csv_parsing ($url) {
-		$csv = trim(file_get_contents($url));
-		$arr = explode("\n", $csv);
-		foreach ($arr as $key=>$line) {
-			$arr[$key] = explode(',', $line);
-		}
+		$arr = [];
+		$handle = fopen($url, "r");
+	    while ($data = fgetcsv($handle, 1000, ",")) $arr[] = $data;
+	    fclose($handle);
 		return $arr;
 	}
 
