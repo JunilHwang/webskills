@@ -10,6 +10,6 @@
 		return $arr;
 	}
 
-	$csv = csv_parsing($url)
+	$csv = csv_parsing($url);
 
 	print_r($csv);
