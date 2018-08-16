@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul,li{list-style:none;}
+		label{cursor:pointer;}
+		.slide{width:1000px;height:400px;margin:0 auto;position:relative;overflow:hidden;}
+		.slide input{display:none;}
+		.slide ul{height:100%;position:relative;}
+		.slide li{position:absolute;left:0;right:0;top:0;bottom:0;}
+		.slide li:after{content:"";display:block;clear:both;}
+		.slide div{height:100%;width:20%;float:left}
+		.slide1>div{background:#faa;}
+		.slide2>div{background:#afa;}
+		.slide3>div{background:#aaf;}
+		.slide li>div:nth-child(1){animation:type-reverse2 1s forwards;}
+		.slide li>div:nth-child(2){animation:type-reverse1 1s forwards;}
+		.slide li>div:nth-child(3){animation:type-reverse2 1s forwards;}
+		.slide li>div:nth-child(4){animation:type-reverse1 1s forwards;}
+		.slide li>div:nth-child(5){animation:type-reverse2 1s forwards;}
+
+		.pos{position:absolute;left:0;right:0;bottom:20px;text-align:center;}
+		.pos label{display:inline-block;width:20px;height:20px;border-radius:20px;background:#FFF;transition:0.5s;font-size:0;}
+
+		#pos1:checked ~ ul .slide1 > div:nth-child(1){animation:type1 1s forwards;}
+		#pos1:checked ~ ul .slide1 > div:nth-child(2){animation:type2 1s forwards;}
+		#pos1:checked ~ ul .slide1 > div:nth-child(3){animation:type1 1s forwards;}
+		#pos1:checked ~ ul .slide1 > div:nth-child(4){animation:type2 1s forwards;}
+		#pos1:checked ~ ul .slide1 > div:nth-child(5){animation:type1 1s forwards;}
+
+		#pos2:checked ~ ul .slide2 > div:nth-child(1){animation:type1 1s forwards;}
+		#pos2:checked ~ ul .slide2 > div:nth-child(2){animation:type2 1s forwards;}
+		#pos2:checked ~ ul .slide2 > div:nth-child(3){animation:type1 1s forwards;}
+		#pos2:checked ~ ul .slide2 > div:nth-child(4){animation:type2 1s forwards;}
+		#pos2:checked ~ ul .slide2 > div:nth-child(5){animation:type1 1s forwards;}
+
+		#pos3:checked ~ ul .slide3 > div:nth-child(1){animation:type1 1s forwards;}
+		#pos3:checked ~ ul .slide3 > div:nth-child(2){animation:type2 1s forwards;}
+		#pos3:checked ~ ul .slide3 > div:nth-child(3){animation:type1 1s forwards;}
+		#pos3:checked ~ ul .slide3 > div:nth-child(4){animation:type2 1s forwards;}
+		#pos3:checked ~ ul .slide3 > div:nth-child(5){animation:type1 1s forwards;}
+
+		#pos1:checked ~ .arrow label:nth-child(1),
+		#pos2:checked ~ .arrow label:nth-child(2),
+		#pos3:checked ~ .arrow label:nth-child(3){display:block;}
+
+		#pos1:checked ~ .pos label:nth-child(1),
+		#pos2:checked ~ .pos label:nth-child(2),
+		#pos3:checked ~ .pos label:nth-child(3){background:#333;}
+
+		@keyframes type1 {
+			from {transform:translateY(-100%);}
+			to {transform:inherit;}
+		}
+		@keyframes type2 {
+			from {transform:translateY(100%);}
+			to {transform:inherit;}
+		}
+		@keyframes type-reverse1 {
+			from {transform:inherit;}
+			to {transform:translateY(-100%);}
+		}
+		@keyframes type-reverse2 {
+			from {transform:inherit;}
+			to {transform:translateY(100%);}
+		}
+	</style>
+</head>
+<body>
+	<div class="slide">
+		<input type="radio" name="pos" id="pos1" checked>
+		<input type="radio" name="pos" id="pos2">
+		<input type="radio" name="pos" id="pos3">
+		<ul>
+			<li class="slide1"><div></div><div></div><div></div><div></div><div></div></li>
+			<li class="slide2"><div></div><div></div><div></div><div></div><div></div></li>
+			<li class="slide3"><div></div><div></div><div></div><div></div><div></div></li>
+		</ul>
+		<p class="pos">
+			<label for="pos1">1</label>
+			<label for="pos2">2</label>
+			<label for="pos3">3</label>
+		</p>
+	</div>
+</body>
+</html>

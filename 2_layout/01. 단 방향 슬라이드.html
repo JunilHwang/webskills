@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul,li{list-style:none;}
+		label{cursor:pointer;}
+		.slide{width:1000px;height:400px;margin:0 auto;position:relative;overflow:hidden;}
+		.slide input{display:none;}
+		.slide ul{width:500%;height:100%;transition:1s;}
+		.slide ul:after{content:"";display:block;clear:both;}
+		.slide li{width:20%;float:left;height:100%;}
+		.slide1{background:#faa;}
+		.slide2{background:#afa;}
+		.slide3{background:#aaf;}
+		#pos1:checked ~ ul{margin-left:-100%;}
+		#pos1-2:checked ~ ul{margin-left:-100%;animation:slide1 1s;}
+		#pos2:checked ~ ul{margin-left:-200%;}
+		#pos3:checked ~ ul{margin-left:-300%;}
+		#pos3-2:checked ~ ul{margin-left:-300%;animation:slide3 1s;}
+		@keyframes slide1{
+			from{margin-left:-300%;} to {margin-left:-400%;}
+		}
+		@keyframes slide3{
+			from{margin-left:-100%;} to {margin-left:0%;}
+		}
+		.arrow{position:absolute;height:50px;line-height:50px;text-align:center;display:inline-block;top:calc(50% - 25px);}
+		.arrow label{display:none;font-size:25px;color:#FFF;}
+		.arrow.left{left:0;}
+		.arrow.right{right:0;}
+		.pos{position:absolute;left:0;right:0;bottom:20px;text-align:center;}
+		.pos label{display:inline-block;width:20px;height:20px;border-radius:20px;background:#FFF;transition:0.5s;font-size:0;}
+
+		#pos1:checked ~ .arrow label:nth-child(1),
+		#pos1-2:checked ~ .arrow label:nth-child(1),
+		#pos2:checked ~ .arrow label:nth-child(2),
+		#pos3:checked ~ .arrow label:nth-child(3),
+		#pos3-2:checked ~ .arrow label:nth-child(3){display:block;}
+
+		#pos1:checked ~ .pos label:nth-child(1),
+		#pos1-2:checked ~ .pos label:nth-child(1),
+		#pos2:checked ~ .pos label:nth-child(2),
+		#pos3:checked ~ .pos label:nth-child(3),
+		#pos3-2:checked ~ .pos label:nth-child(3){background:#333;}
+	</style>
+</head>
+<body>
+	<div class="slide">
+		<input type="radio" name="pos" id="pos1" checked>
+		<input type="radio" name="pos" id="pos1-2">
+		<input type="radio" name="pos" id="pos2">
+		<input type="radio" name="pos" id="pos3">
+		<input type="radio" name="pos" id="pos3-2">
+		<ul>
+			<li class="slide3"></li>
+			<li class="slide1"></li>
+			<li class="slide2"></li>
+			<li class="slide3"></li>
+			<li class="slide1"></li>
+		</ul>
+		<div class="arrow left">
+			<label for="pos3-2">&lt;</label>
+			<label for="pos1">&lt;</label>
+			<label for="pos2">&lt;</label>
+		</div>
+		<div class="arrow right">
+			<label for="pos2">&gt;</label>
+			<label for="pos3">&gt;</label>
+			<label for="pos1-2">&gt;</label>
+		</div>
+		<p class="pos">
+			<label for="pos1">1</label>
+			<label for="pos2">2</label>
+			<label for="pos3">3</label>
+		</p>
+	</div>
+</body>
+</html>
