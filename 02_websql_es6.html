@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" method="post">
+		<fieldset>
+			<input type="hidden" name="action" value="insert">
+			<legend>추가</legend>
+			<input type="text" name="writer" placeholder="작성자" size="10">
+			<input type="text" name="content" placeholder="내용" size="40">
+			<button type="submit">전송</button>
+		</fieldset>
+	</form>
+
+	<form action="" method="post">
+		<fieldset>
+			<legend>수정</legend>
+			<input type="hidden" name="action" value="update">
+			<input type="text" name="idx" placeholder="글번호" size="3">
+			<input type="text" name="writer" placeholder="작성자" size="10">
+			<input type="text" name="content" placeholder="내용" size="40">
+			<button type="submit">전송</button>
+		</fieldset>
+	</form>
+
+	<form action="" method="post">
+		<fieldset>
+			<legend>삭제</legend>
+			<input type="hidden" name="action" value="delete">
+			<input type="text" name="idx" placeholder="글번호" size="3">
+			<button type="submit">전송</button>
+		</fieldset>
+	</form>
+
+	<div class="list">
+		
+	</div>
+
+	<script type="text/javascript">
+
+		// es6 ver
+		const model = new class {
+			init () {
+				this.db = openDatabase('20180814', '1.0', 'Test DB', 2 * 1024 * 1024)
+				const sql = `CREATE TABLE IF NOT EXISTS board (idx integer primary key, writer, content, date date)`
+				return new Promise(async resolve => {
+					await this.query(sql)
+					resolve()
+				})
+			}
+
+			query (sql, arr = [], await = true) {
+				return new Promise(resolve => {
+					this.db.transaction(tx => { tx.executeSql(sql, arr, (tx, res) => { resolve(res) }, (tx, error) => { console.log(error)}) })
+				})
+			}
+		}
+
+
+		// get list
+		const getList = (list) => {
+			const rows = list.rows
+			let txt = ''
+			for ( const data of rows ) {
+				txt += `<p>${data.idx} / ${data.writer} / ${data.content} / ${data.date}</p> `
+			}
+			$('.list')[0].innerHTML = txt
+		}
+
+		model.init()
+		.then(() => model.query('SELECT * FROM board'))
+		.then(getList)
+
+		// event handler
+		const $ = document.querySelectorAll.bind(document)
+		const frms = $('form')
+		for ( const frm of frms ) {
+			frm.addEventListener('submit', e => {
+				e.preventDefault()
+				const action = frm['action'].value
+				const table = 'board'
+				let sql, arr
+				switch (action) {
+					case 'insert' :
+						arr = [frm.writer.value, frm.content.value, Date.now()+""]
+						sql = 'INSERT INTO board (writer, content, date) values(?, ?, ?)'
+					break;
+					case 'update' :
+						arr = [frm.writer.value, frm.content.value, ~~frm.idx.value]
+						sql = 'UPDATE board SET writer = ?, content = ? where idx = ?'
+					break;
+					case 'delete' :
+						arr = [~~frm.idx.value]
+						sql = 'DELETE FROM board where idx = ?'
+					break;
+				}
+				model.query(sql, arr)
+				.then(res => new Promise(resolve => { frm.reset(); alert('완료되었습니다.'); resolve(res) }))
+				.then(res => model.query("SELECT * FROM board order by idx desc"))
+				.then(getList)
+			})
+		}
+	</script>
+</body>
+</html>

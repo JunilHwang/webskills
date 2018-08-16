@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" method="post">
+		<fieldset>
+			<input type="hidden" name="action" value="insert">
+			<legend>추가</legend>
+			<input type="text" name="writer" placeholder="작성자" size="10">
+			<input type="text" name="content" placeholder="내용" size="40">
+			<button type="submit">전송</button>
+		</fieldset>
+	</form>
+
+	<form action="" method="post">
+		<fieldset>
+			<legend>수정</legend>
+			<input type="hidden" name="action" value="update">
+			<input type="text" name="idx" placeholder="글번호" size="3">
+			<input type="text" name="writer" placeholder="작성자" size="10">
+			<input type="text" name="content" placeholder="내용" size="40">
+			<button type="submit">전송</button>
+		</fieldset>
+	</form>
+
+	<form action="" method="post">
+		<fieldset>
+			<legend>삭제</legend>
+			<input type="hidden" name="action" value="delete">
+			<input type="text" name="idx" placeholder="글번호" size="3">
+			<button type="submit">전송</button>
+		</fieldset>
+	</form>
+
+	<div class="list">
+		
+	</div>
+
+	<script type="text/javascript">
+
+		// es6 ver
+		const db = new class {
+			init () {
+				const _this = this
+				const res = indexedDB.open('201801814', 2)
+				res.onupgradeneeded = e => {
+					_this.idb = e.target.result
+					e.target.result.createObjectStore('board', {keyPath: 'idx', autoIncrement: true})
+				}
+				return new Promise (resolve => {
+					res.onsuccess = e => {
+						_this.idb = e.target.result
+						resolve()
+					}
+				})
+			}
+
+			getTable (table) {
+				return this.idb.transaction([table], 'readwrite').objectStore(table)
+			}
+
+			query (type, option) {
+				let res
+				switch (type) {
+					case 'insert': res = this.getTable(option.table).add(option.column); break
+					case 'update': res = this.getTable(option.table).put(option.column); break
+					case 'delete': res = this.getTable(option.table).delete(option.idx); break
+					case 'fetch': res = this.getTable(option.table).get(option.idx); break
+					case 'fetchAll': res = this.getTable(option.table).getAll();  break
+				}
+				return new Promise(resolve => { res.onsuccess = resolve })
+			}
+		}
+
+		// get list
+		const getList = () => {
+			db.query('fetchAll', {table: 'board'})
+			.then(e => {
+				const list = e.target.result
+				let html = ''
+				for (const data of list ) {
+					html += `<p>${data.idx} / ${data.writer} / ${data.content} / ${data.date}</p>`
+				}
+				$('.list')[0].innerHTML = html
+			})
+		}
+
+		// window on load
+		db.init().then(getList)
+
+		// event handler
+		const $ = document.querySelectorAll.bind(document)
+		const frms = $('form')
+		for ( const frm of frms) {
+			frm.addEventListener('submit', e => {
+				e.preventDefault()
+				const action = frm['action'].value
+				const table = 'board'
+				let option, idx, writer, content, date
+				switch (action) {
+					case 'insert' :
+						[writer, content, date] = [frm.writer.value, frm.content.value, Date.now()]
+						option = {table, column:{writer, content, date}}
+					break;
+					case 'update' :
+						[idx, writer, content, date] = [~~frm.idx.value, frm.writer.value, frm.content.value, Date.now()]
+						option = {table, column:{idx, writer, content, date}}
+					break;
+					case 'delete' :
+						idx = ~~frm.idx.value
+						option = {table, idx}
+					break;
+				}
+				alert(`완료되었습니다 ${option.idx}`)
+				frm.reset()
+				db.query(action, option).then(getList).then()
+			})
+		}
+	</script>
+</body>
+</html>
