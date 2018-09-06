@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .box{width:100px;height:100px;border:1px solid #000;}
+        .box.active{background:#09F;}
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let timer
+        $(document)
+        .on({
+            mousedown () {
+                timer = setTimeout(_=> {
+                    $('.box').toggleClass('active')
+                }, 500)
+            },
+            mouseleave () {
+                clearTimeout(timer)
+            }
+        }, '.box')
+        .on('mouseup', _=>{
+            clearTimeout(timer)
+        })
+    </script>
+</body>
+</html>
