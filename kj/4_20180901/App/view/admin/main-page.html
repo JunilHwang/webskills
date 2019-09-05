@@ -1,0 +1,152 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>관리자</title>
+
+    <!-- DEFAULT CSS -->
+    <link rel="stylesheet" type="text/css" href="../../css/default.css">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" type="text/css" href="../../admin/css/admin.css">
+
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+
+<body>
+    <style>
+        .m-cont {
+            float: left;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .m-cont>li {
+            float: left;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+        }
+
+        .m-cont>li p {
+            margin-top: 3px;
+            font-size: 14px;
+        }
+
+        .m-cont>li.add-list {
+            background-color: #fff !important;
+        }
+
+    </style>
+    <div id="wrap" class="admin">
+    
+        <div id="header">
+            <div class="wrap">
+                <div class="hd-top">
+                    <div id="logo">
+                        <h1><a href="#">ADMIN</a></h1>
+                    </div>
+
+                    <a href="#" class="home-move">홈페이지로 이동</a>
+                    <p><a href="#">LOG OUT</a></p>
+                </div>
+
+                <div class="hd-bot">
+                    <ul>
+                        <li>
+                            <a href="#">관리 메뉴</a>
+                        </li>
+                    </ul>
+
+                    <div class="submenu" style="display:none;">
+                        <ul>
+                            <li><a href="#">홈페이지 관리</a></li>
+                            <li><a href="#">메뉴관리</a></li>
+                            <li><a href="#">메인페이지 구성</a></li>
+                            <li><a href="#">메뉴별컨텐츠</a></li>
+                            <li><a href="#">애니메이션 구성</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><a href="#">게시판</a></li>
+                            <li><a href="#">설정</a></li>
+                        </ul>
+
+                        <span>메뉴 열어두기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="contents" class="main-page">
+            <div class="wrap">
+                <div class="page-title">
+                    <h3>메인페이지 구성</h3>
+                </div>
+
+                <div class="dan-add-btn">
+                    <button type="button">단 추가</button>
+                </div>
+
+                <form method="post" class="main-page-frm">
+                    <div class="dan-list">
+                        <div class="dan-add-frm">
+                        </div>
+
+                        <div class="list">
+
+                            <p>1단 : 상단 라인색 : 미설정 하단 라인색 : 미설정 배경색 : 미설정
+
+                                <button type="button" class="main-page-set" >라인 및 배경색 설정</button>
+
+                                <button type="button" class="cont-add" >+ 컨텐츠 추가</button>
+
+                                <span>
+                                <input type="checkbox" class="r_chk" name="remove-chk" >
+                                삭제
+                            </span>
+
+                                <ul class="m-cont">
+                                    <li>
+                                        <p><span>↕</span> 컨텐츠 : 게시판 - 공지사항 </p>
+                                        <button type="button" class="cont-set" >컨텐츠 설정</button>
+                                        <input type="checkbox" class="r_chk" name="remove-chk" > 삭제
+                                    </li>
+                                    <li>
+                                        <p><span>↕</span> 컨텐츠 : 게시판 - 커뮤니티 </p>
+                                        <button type="button" class="cont-set" >컨텐츠 설정</button>
+                                        <input type="checkbox" class="r_chk" name="remove-chk" > 삭제
+                                    </li>
+                                    <li>
+                                        <p><span>↕</span> 컨텐츠 : 게시판 - 갤러리 </p>
+                                        <button type="button" class="cont-set" >컨텐츠 설정</button>
+                                        <input type="checkbox" class="r_chk" name="remove-chk" > 삭제
+                                    </li>
+                                </ul>
+
+                        </div>
+                    </div>
+                </form>
+
+                <div class="save-btn">
+                    <button type="button">변경사항 적용하기</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="copy">
+                <p>COPYRIGHT (c) 2018 ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

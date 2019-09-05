@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.06.09",
+    "time": "12:09:57",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 3850
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "32551629"
+  },
+  "more": {
+    "name": "GS25대림소망점",
+    "number": "770759541",
+    "address": "서울 영등포구 가마산로 329 1층(대림동,소망빌딩)",
+    "call": "02-2006-2118"
+  }
+}

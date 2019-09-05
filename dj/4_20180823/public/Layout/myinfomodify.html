@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <title>우리동네배달</title>
+    <script type="text/javascript" src="assets/js/jquery/jquery-3.3.1/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-4.1.1-dist/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <link href="assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/dashboard.css" rel="stylesheet" />
+  </head>
+
+  <body>
+  <script type="text/javascript">
+    $(function(){
+      mapMarker();
+    })
+  </script>
+    <div class="page">
+      <div class="page-main">
+        <div class="header py-4">
+          <div class="container">
+            <div class="d-flex text-center">
+              <a class="header-brandm col-12" href="index.html">
+                <img src="./assets/images/logo.png" class="header-brand-img" alt="우리동네배달">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              
+              <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-lg-row">
+
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="fe fe-log-in"></i> 로그인</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="join.html" class="nav-link"><i class="fe fe-home"></i> 회원가입</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="order.html" class="nav-link"><i class="fe fe-home"></i> 주문하기</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="details.html" class="nav-link"><i class="fe fe-home"></i> 주문내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="affiliation.html" class="nav-link"><i class="fe fe-home"></i> 가맹회원</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <!-- page title start-->
+              <h1 class="page-title">
+                내 정보변경
+              </h1>
+              <!-- page title end-->
+            </div>
+
+            <!-- contents start -->
+            <div class="col-8 mx-auto mt-2">
+              <div class="row">
+            
+                <form class="card" action="" method="post">
+                  <div class="card-body p-6">
+                    <div class="card-title">내 정보변경</div>
+                    <div class="form-group">
+                      <label class="form-label">아이디</label>
+                      <input type="text" class="form-control" value="master" readonly="readonly">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">성명</label>
+                      <input type="text" class="form-control" value="관리자" readonly="readonly">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">비밀번호</label>
+                      <input type="password" class="form-control" placeholder="영문숫자조합 4~8자이내">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">회원구분</label>
+                      <div>
+                        <select class="form-control custom-select">
+                          <option value="">선택</option>
+                          <option value="">일반회원</option>
+                          <option value="">가맹회원</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">전화번호</label>
+                      <input type="text" class="form-control" placeholder="0000-0000-0000형식">
+                    </div> 
+                    <div class="form-group">
+                      <label class="form-label">위치정보</label>
+                        <div>
+                          <div class="card">
+                            <div class="card-header">
+                              <h3 class="card-title">위치좌표(x, y)</h3>
+                              <div class="col-3">
+                                <input type="text" class="form-control position" readonly="readonly" value="335,194">
+                              </div>
+                              <span>지도에 위치를 클릭해주세요.</span>
+                            </div>
+                            <div class="card-map card-map-placeholder">
+                                <div id="map">
+                                  <img src="assets/images/map.jpg" id="map">
+                                  <img src="assets/images/red_map_marker.png" id="marker">
+                                </div>
+
+                            </div>
+                           
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                      <div class="btn-list mt-4 text-center">
+                        <button type="reset" class="btn btn-secondary btn-space">다시작성하기</button>
+                        <button type="submit" class="btn btn-primary btn-space">회원정보변경</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+            <!-- contents end -->
+
+          </div>
+        </div>
+      </div>
+     
+      <footer class="footer">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-auto col-lg-auto mt-3 mt-lg-0 text-center">
+              Copyright © 2018 <a href="">우리동네배달</a> All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.06.12",
+    "time": "08:42:29",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 1900
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "74741955"
+  },
+  "more": {
+    "name": "파리바게뜨(분당장안",
+    "number": "746131725",
+    "address": "경기 성남시 분당구 분당로263번길 35 (서현동)",
+    "call": "031-704-0459"
+  }
+}

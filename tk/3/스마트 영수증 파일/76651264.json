@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.06.30",
+    "time": "15:28:1",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 5500
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "76651264"
+  },
+  "more": {
+    "name": "하모니마트(동판교점)",
+    "number": "794498834",
+    "address": "경기도 성남시 분당구 동판교로 91 B101동 B101호 (백현동,백현마을4단지아파트)",
+    "call": "031-8016-1818"
+  }
+}

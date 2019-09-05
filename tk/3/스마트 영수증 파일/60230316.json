@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.06",
+    "time": "17:42:06",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 8000
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "60230316"
+  },
+  "more": {
+    "name": "티머니 전국시외버스",
+    "number": "797750884",
+    "address": "서울 중구 후암로 110 (남대문로5가,서울시티타워) 10층",
+    "call": "02-1644-0088"
+  }
+}

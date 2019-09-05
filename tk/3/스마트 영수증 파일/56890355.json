@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.06",
+    "time": "08:47:28",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 3800
+  },
+  "card": {
+    "information": "MASTER",
+    "number": "5461-12**-****-5122",
+    "approval": "56890355"
+  },
+  "more": {
+    "name": "스마일페이파리바게뜨",
+    "number": "701523873",
+    "address": "서울 강남구 테헤란로 152 (역삼동,강남 파이낸스센터)",
+    "call": "02-1566-5701"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.06.12",
+    "time": "16:05:39",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 4600
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "53402013"
+  },
+  "more": {
+    "name": "투썸플레이스 대전은",
+    "number": "795501721",
+    "address": "대전 중구 대종로488번길 54 2층 (은행동)",
+    "call": "031-704-0459"
+  }
+}

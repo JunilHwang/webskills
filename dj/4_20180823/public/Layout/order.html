@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <title>우리동네배달</title>
+    <script type="text/javascript" src="assets/js/jquery/jquery-3.3.1/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-4.1.1-dist/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <link href="assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/dashboard.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+  <script type="text/javascript">
+    $(function(){
+      posToggle();
+      searchToggle();
+    })
+  </script>
+    <div class="page">
+      <div class="page-main">
+        <div class="header py-4">
+          <div class="container">
+            <div class="d-flex text-center">
+              <a class="header-brandm col-12" href="index.html">
+                <img src="./assets/images/logo.png" class="header-brand-img" alt="우리동네배달">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              
+              <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-lg-row">
+
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="fe fe-log-in"></i> 로그인</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="join.html" class="nav-link"><i class="fe fe-home"></i> 회원가입</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="order.html" class="nav-link"><i class="fe fe-home"></i> 주문하기</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="details.html" class="nav-link"><i class="fe fe-home"></i> 주문내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="affiliation.html" class="nav-link"><i class="fe fe-home"></i> 가맹회원</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <!-- page title start-->
+              <h1 class="page-title">
+                 주문하기
+              </h1>
+              <!-- page title end-->
+            </div>
+
+            <!-- contents start -->
+            <div class="col-12">
+              <div class="row">
+                
+                <div class="form-group col-12">
+                  <div class="selectgroup w-100">
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="50" class="selectgroup-input" checked="">
+                      <span class="selectgroup-button">전체보기</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="100" class="selectgroup-input">
+                      <span class="selectgroup-button">한식</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="100" class="selectgroup-input">
+                      <span class="selectgroup-button">중식</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="100" class="selectgroup-input">
+                      <span class="selectgroup-button">일식</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="100" class="selectgroup-input">
+                      <span class="selectgroup-button">치킨</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="100" class="selectgroup-input">
+                      <span class="selectgroup-button">피자</span>
+                    </label>
+                    <label class="selectgroup-item">
+                      <input type="radio" name="value" value="100" class="selectgroup-input">
+                      <span class="selectgroup-button">야식</span>
+                    </label>
+                  </div>
+                </div>
+                
+
+                <div class="form-group col-4">
+                  <div class="row gutters-xs">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="가맹점검색">
+                    </div>
+                    <span class="col-auto">
+                      <button class="btn btn-secondary" type="button"><i class="fe fe-search"></i></button>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="form-group col-8 mt-2">
+                  <div class="custom-controls-stacked">
+                    <label class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1">
+                      <span class="custom-control-label">평점순</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
+                      <span class="custom-control-label">리뷰순</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" class="custom-control-input" name="example-inline-radios" value="option3">
+                      <span class="custom-control-label">가까운지점</span>
+                    </label>
+                  </div>
+                </div>
+  
+                <div class="col-12">
+                  <div class="card">
+                      <div class="card-map card-map-placeholder">
+                          <div id="map"  style="float: left">
+                            <img src="assets/images/test_map.jpg" id="map">
+                            <img src="assets/images/red_map_marker.png" id="marker">
+                          </div>
+                          <h3 class="text-center mt-6">전체보기</h3>
+                          <table style="width: 433px; height: 220px;">
+                            <tr>
+                              <td style="vertical-align: middle;" class="text-left">
+                                <p><img src="assets/images/red_map_marker.png" style="vertical-align: bottom; margin-left: 150px;"> &nbsp;&nbsp;회원위치</p>
+                                <p><img src="assets/images/blue_map_marker.png" style="vertical-align: bottom; margin-left: 150px;"> &nbsp;&nbsp;가맹점위치</p>  
+                                <p><img src="assets/images/pink_map_marker.png" style="vertical-align: bottom; margin-left: 150px;"> &nbsp;&nbsp;위치표시 가맹점</p>
+                              </td>
+                            </tr>
+                          </table>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="card">
+                    <table class="table card-table table-vcenter affiliationList">
+                      <tbody>
+                        <tr title="피자스타">
+                          <td style="width: 10%;"><img src="assets/images/test_logo.png" alt="" class="h-8"></td>
+                          <td>
+                            <a href="order-menu.html" title="피자스타 메뉴주문 페이지">
+                              <h5>피자스타</h5>
+                              <ul class="list">
+                                <li>
+                                  <span class="title">평점</span>  
+                                  <span class="badge badge-primary">5점</span>
+                                </li>
+                                <li>
+                                  <span class="title">리뷰</span>  
+                                  <span class="badge badge-primary">25개</span>
+                                </li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>
+                            가맹점위치<br>
+                            회원위치정보(193,202), 가맹점위치정보(208,110)<br>
+                            회원위치와 가맹점간의 거리 = 93.21481
+                          </td>
+                          <td class="text-right">
+                            <label class="custom-switch">
+                              <input type="radio" name="option" value="1" class="custom-switch-input">
+                              <span class="custom-switch-indicator"></span>
+                              <span class="custom-switch-description">위치표시</span>
+                            </label>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td style="width: 10%;"><img src="assets/images/test_logo1.png" alt="" class="h-8"></td>
+                          <td>
+                            <a href="order-menu.html" title="도레미피자 메뉴주문 페이지">
+                              <h5>도레미피자</h5>
+                              <ul class="list">
+                                <li>
+                                  <span class="title">평점</span>  
+                                  <span class="badge badge-primary">5점</span>
+                                </li>
+                                <li>
+                                  <span class="title">리뷰</span>  
+                                  <span class="badge badge-primary">25개</span>
+                                </li>
+                              </ul>
+                            </a>
+                          </td>
+                          <td>
+                            가맹점위치<br>
+                            회원위치정보(193,202), 가맹점위치정보(568,101)<br>
+                            회원위치와 가맹점간의 거리 = 360.1125
+                          </td>
+                          <td class="text-right">
+                            <label class="custom-switch">
+                              <input type="radio" name="option" value="1" class="custom-switch-input">
+                              <span class="custom-switch-indicator"></span>
+                              <span class="custom-switch-description">위치표시</span>
+                            </label>
+                          </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- contents end -->
+
+          </div>
+        </div>
+      </div>
+     
+      <footer class="footer">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-auto col-lg-auto mt-3 mt-lg-0 text-center">
+              Copyright © 2018 <a href="">우리동네배달</a> All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

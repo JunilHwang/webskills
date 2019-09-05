@@ -16,7 +16,7 @@ class Navigation {
 		Navigation.gnb = $('.gnb')
 		Navigation.len = Navigation.gnb.find('li').length
 		Navigation.section = page.children('section')
-		Navigation.current = url && url.searchParams.get('page') !== null ? parseInt(url.searchParams.get('page')) : -1
+		Navigation.current = url && url.searchParams.get('page') !== null ? parseInt(url.searchParams.get('page')) : 1
 
 		// default page
 		if (Navigation.current == -1) {
@@ -76,39 +76,31 @@ class Navigation {
 			  nextPage = section.eq(num)
 
 
+		Navigation.nowPage = num
 		const pageSet = (before, after, target) => {
-			before.fadeOut(500, () => {
-				Navigation.nowPage = num
+			before.stop().fadeOut(500, () => {
 				page.find('>section').removeClass('active')
 				section.eq(num).addClass('active')
 				gnb.find('li').removeClass('active')
 				gnb.find('li').eq(num).addClass('active')
 				before.removeClass('active')
-				after.fadeIn(300, () => {
+				after.stop().fadeIn(300, () => {
 					after.addClass('active')
 					new Animation({obj:target})
 				})
 			})
 		}
 
-		const option = now === -1
-				? { /* main to sub */
-					obj: main,
-					reverse: true,
-					callback: () => {
-						pageSet(main, sub, sub.find(`.sub-default, .page>section:eq(${num})`))
-					}
+		const callback = now === -1 ?
+				() => {
+					pageSet(main, sub, sub.find(`.sub-default, .page>section:eq(${num})`))
+				} :
+				() => {
+					main.removeClass('active')
+					pageSet(currentPage, nextPage, nextPage)
 				}
-				: { /* sub to sub */
-					obj: currentPage,
-					reverse: true,
-					callback: () => {
-						main.removeClass('active')
-						pageSet(currentPage, nextPage, nextPage)
-					}
-				}
-
-		new Animation(option)
+		const obj = now === -1 ? main : currentPage
+		new Animation({obj, reverse: true, callback})
 	}
 
 	// go to selected sub page

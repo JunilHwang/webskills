@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.01",
+    "time": "23:27:30",
+    "classification": "Cancellation",
+    "type": "Online",
+    "amount": 11400
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "33489044"
+  },
+  "more": {
+    "name": "네이버(주)",
+    "number": "786794429",
+    "address": "서울 용산구 한강대로 32 LG유플러스빌딩 (한강로3가)",
+    "call": "02-1544-0001"
+  }
+}

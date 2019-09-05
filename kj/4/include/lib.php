@@ -1,11 +1,11 @@
 <?php
-$pdo = new PDO("mysql:host=localhost; dbname=20180514; charset=utf8", "root", "");
+@header("content-type:text/html; charset=utf-8");
+@session_start();
 
-header("content-type:text/html; charset=utf-8");
+$pdo = new PDO("mysql:host=127.0.0.1;dbname=20180514;charset=utf8", "root", "");
 
 date_default_timezone_set("Asia/Seoul");
 
-session_start();
 
 function alert($msg){
     echo "<script>alert('{$msg}');</script>";

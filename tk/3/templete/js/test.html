@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>svg to png</button>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="330" height="420">
+		<foreignObject width="100%" height="100%">
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<text>스마트 영수증</text>
+				<text>사용처 : 씨제이올리브네트웍스 주식회사</text>
+				<text>가맹점번호 : 281520178</text>
+				<text>전화번호 : 1577-4887</text>
+				<text>주소 : 서울 용산구 한강대로 336 트윈시티 10</text>
+				<text>[오프라인 결제]</text>
+				<text>카드종류 : 마스터카드</text>
+				<text>카드번호 : 5461-12**-****-5122</text>
+				<text>거래승인 : 30001472</text>
+				<text>거래일시 : 1970.01.01 (목) NaN:NaN:NaN</text>
+				<text>거래금액 : 6,000원</text>
+				<text>부가 : 0원</text>
+				<text>합계 : 6,000원</text>
+				<text>감사합니다!</text>
+			</div>
+		</foreignObject>
+	</svg>
+
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		var btn = document.querySelector('button');
+		var svg = document.querySelector('svg');
+		var canvas = document.querySelector('canvas');
+
+		function triggerDownload (imgURI) {
+		  var evt = new MouseEvent('click', {
+		    view: window,
+		    bubbles: false,
+		    cancelable: true
+		  });
+
+		  var a = document.createElement('a');
+		  a.setAttribute('download', 'MY_COOL_IMAGE.png');
+		  a.setAttribute('href', imgURI);
+		  a.setAttribute('target', '_blank');
+
+		  a.dispatchEvent(evt);
+		}
+
+		btn.addEventListener('click', function () {
+		  var canvas = document.getElementById('canvas');
+		  var ctx = canvas.getContext('2d');
+		  var data = (new XMLSerializer()).serializeToString(svg);
+		  var DOMURL = window.URL || window.webkitURL || window;
+
+		  var img = new Image();
+		  var svgBlob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+		  var url = DOMURL.createObjectURL(svgBlob);
+
+		  img.onload = function () {
+		    ctx.drawImage(img, 0, 0);
+		    DOMURL.revokeObjectURL(url);
+
+		    var imgURI = canvas
+		        .toDataURL('image/png')
+		        .replace('image/png', 'image/octet-stream');
+
+		    triggerDownload(imgURI);
+		  };
+
+		  img.src = url;
+		});
+	</script>
+</body>
+</html>

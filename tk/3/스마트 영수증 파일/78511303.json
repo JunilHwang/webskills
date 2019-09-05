@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.05.29",
+    "time": "18:08:55",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 3000
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "78511303"
+  },
+  "more": {
+    "name": "미니스톱레이디파크점",
+    "number": "776951681",
+    "address": "경기 성남시 분당구 분당로263번길 39 (서현동)",
+    "call": "031-701-1564"
+  }
+}

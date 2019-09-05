@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.05.26",
+    "time": "12:31:01",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 6000
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "71079160"
+  },
+  "more": {
+    "name": "바우네나주곰탕",
+    "number": "707201484",
+    "address": "서울 영등포구 가마산로 337,1층 102호 (대림동,미루빌딩)",
+    "call": "02-832-5441"
+  }
+}

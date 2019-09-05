@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.05.23",
+    "time": "14:57:07",
+    "classification": "Payment",
+    "type": "Online",
+    "amount": 3795
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "62612129"
+  },
+  "more": {
+    "name": "SK테크엑스(주)",
+    "number": "753445882",
+    "address": "경기 성남시 분당구 대왕판교로 660 (삼평동,유스페이스1 A동 5층)",
+    "call": "02-1588-4954"
+  }
+}

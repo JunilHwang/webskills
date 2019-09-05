@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.02",
+    "time": "13:03:44",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 29500
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "70789394"
+  },
+  "more": {
+    "name": "진우동",
+    "number": "783932261",
+    "address": "경기 성남시 분당구 황새울로335번길 8 104호, 덕산빌딩 (서현동)",
+    "call": "031-708-5989"
+  }
+}

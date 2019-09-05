@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.05.30",
+    "time": "12:43:33",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 7000
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "74089710"
+  },
+  "more": {
+    "name": "청명이가밥상황가갈비",
+    "number": "790000211",
+    "address": "서울 영등포구 가마산로 356-1 (대림동)",
+    "call": "02-8330-6718"
+  }
+}

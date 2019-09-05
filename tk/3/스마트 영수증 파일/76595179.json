@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.06.30",
+    "time": "15:23:14",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 5000
+  },
+  "card": {
+    "information": "MASTER",
+    "number": "5461-12**-****-5122",
+    "approval": "76595179"
+  },
+  "more": {
+    "name": "아이스팡팡",
+    "number": "708478937",
+    "address": "경기 성남시 분당구 동판교로 91, 제상가동 제지하1층 제비106호 (백현동,백현마을4단지아파트)",
+    "call": "031-703-1970"
+  }
+}

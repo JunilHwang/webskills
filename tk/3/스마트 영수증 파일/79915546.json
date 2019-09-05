@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.06.28",
+    "time": "19:23:36",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 5100
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "79915546"
+  },
+  "more": {
+    "name": "해피판교역점",
+    "number": "794371614",
+    "address": "경기 성남시 분당구 대왕판교로606번길 39 (삼평동,럭스타워)",
+    "call": "031-8017-0662"
+  }
+}

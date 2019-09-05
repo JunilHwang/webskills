@@ -1,0 +1,143 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>관리자</title>
+
+    <!-- DEFAULT CSS -->
+    <link rel="stylesheet" type="text/css" href="../../css/default.css">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" type="text/css" href="../../admin/css/admin.css">
+
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap" class="admin">
+    
+        <div id="header">
+            <div class="wrap">
+                <div class="hd-top">
+                    <div id="logo">
+                        <h1><a href="#">ADMIN</a></h1>
+                    </div>
+
+                    <a href="#" class="home-move">홈페이지로 이동</a>
+                    <p><a href="#">LOG OUT</a></p>
+                </div>
+
+                <div class="hd-bot">
+                    <ul>
+                        <li>
+                            <a href="#">관리 메뉴</a>
+                        </li>
+                    </ul>
+
+                    <div class="submenu" style="display:none;">
+                        <ul>
+                            <li><a href="#">홈페이지 관리</a></li>
+                            <li><a href="#">메뉴관리</a></li>
+                            <li><a href="#">메인페이지 구성</a></li>
+                            <li><a href="#">메뉴별컨텐츠</a></li>
+                            <li><a href="#">애니메이션 구성</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><a href="#">게시판</a></li>
+                            <li><a href="#">설정</a></li>
+                        </ul>
+
+                        <span>메뉴 열어두기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contents" class="main-image">
+            <div class="wrap">
+                <div class="page-title">
+                    <h3>애니메이션 구성</h3>
+                </div>
+
+                <form class="main-image-frm" method="post" >
+                    <table>
+                        <colgroup>
+                            <col style="width:17%;">
+                            <col style="width:22%;">
+                            <col style="width:22%;">
+                            <col style="width:22%;">
+                            <col style="width:17%;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th>좌측배경 (옵션)</th>
+                                <th>이미지1</th>
+                                <th>이미지2</th>
+                                <th>이미지3</th>
+                                <th>우측배경 (옵션)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>배경색 : #<input type="text" name="left-back" maxlength="6" value="333"><div class="btn" ><button type="button" class="bc-remove c-remove" >삭제</button></div>
+                                   </span>
+                                </td>
+                                <td>
+                                    <span >
+                                        <button type="button" class="f_find" style="float:left;">파일 선택</button> <span class="f_name" style="width:auto;">gallery_4.jpg</span><input type="file" class="file" name="m_img" style="float:left; width:180px; display:none;">
+                                    <div class="btn"><button type="button" class="bc-remove i-remove" >삭제</button></div>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span >
+                                        <button type="button" class="f_find" style="float:left;">파일 선택</button> <span class="f_name" style="width:auto;">선택파일없음</span><input type="file" class="file" name="m_img" style="float:left; width:180px; display:none;">
+                                    <div class="btn"><button type="button" class="bc-remove i-remove" >삭제</button></div>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span >
+                                        <button type="button" class="f_find" style="float:left;">파일 선택</button> <span class="f_name" style="width:auto;">선택파일없음</span><input type="file" class="file" name="m_img" style="float:left; width:180px; display:none;">
+                                    <div class="btn"><button type="button" class="bc-remove i-remove" >삭제</button></div>
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span>
+                                       배경색 : #<input type="text" name="right-back" maxlength="6" value="333"><div class="btn" ><button type="button" class="bc-remove c-remove" >삭제</button></div>
+                                   </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="rotaction-sec">
+                        <input type="text" name="second" value="2">
+                        <p>초(Sec.) 마다 대표이미지를 변경합니다.</p>
+                    </div>
+                </form>
+
+
+                <div class="save-btn">
+                    <button type="button" >변경사항 적용하기</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="copy">
+                <p>COPYRIGHT (c) 2018 ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

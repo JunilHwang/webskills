@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.03",
+    "time": "13:46:16",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 30000
+  },
+  "card": {
+    "information": "VISA",
+    "number": "9441-92**-****-6743",
+    "approval": "79964387"
+  },
+  "more": {
+    "name": "국시엔국수",
+    "number": "792046606",
+    "address": "서울 용산구 한강대로 376번길 37",
+    "call": "031-705-1266"
+  }
+}

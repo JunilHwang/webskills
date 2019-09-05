@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.04",
+    "time": "13:34:58",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 6000
+  },
+  "card": {
+    "information": "MASTER",
+    "number": "5461-12**-****-5122",
+    "approval": "30001472"
+  },
+  "more": {
+    "name": "씨제이올리브네트웍스 주식회사",
+    "number": "281520178",
+    "address": "서울 용산구 한강대로 336 트윈시티 10",
+    "call": "1577-4887"
+  }
+}

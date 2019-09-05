@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.05",
+    "time": "17:29:43",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 3900
+  },
+  "card": {
+    "information": "MASTER",
+    "number": "5461-12**-****-5122",
+    "approval": "70361640"
+  },
+  "more": {
+    "name": "포다낭",
+    "number": "700734247",
+    "address": "경기 성남시 분당구 황새울로360번길 12,1층 112호 (서현동,대명프라자)",
+    "call": "031-702-8283"
+  }
+}

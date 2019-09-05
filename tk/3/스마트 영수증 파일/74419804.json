@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.05.16",
+    "time": "12:43:07",
+    "classification": "Payment",
+    "type": "Offline",
+    "amount": 5000
+  },
+  "card": {
+    "information": "MASTER",
+    "number": "5461-12**-****-5122",
+    "approval": "74419804"
+  },
+  "more": {
+    "name": "노걸대감자탕&가마삼",
+    "number": "705422772",
+    "address": "서울 영등포구 가마산로 338,102호 (대림동)",
+    "call": "02-831-4322"
+  }
+}

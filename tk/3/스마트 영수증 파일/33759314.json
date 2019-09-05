@@ -1,0 +1,20 @@
+{
+  "transaction": {
+    "date": "2018.07.02",
+    "time": "01:53:05",
+    "classification": "Payment",
+    "type": "Online",
+    "amount": 3500
+  },
+  "card": {
+    "information": "MASTER",
+    "number": "5461-12**-****-5122",
+    "approval": "33759314"
+  },
+  "more": {
+    "name": "미팩토리",
+    "number": "790174561",
+    "address": "서울 강서구 마곡중앙8로 71 E 13 이언스파크LG CNS (마곡동,엘지사)",
+    "call": "02-2099-1286"
+  }
+}

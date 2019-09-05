@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <title>우리동네배달</title>
+    <script type="text/javascript" src="assets/js/jquery/jquery-3.3.1/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assets/js/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-4.1.1-dist/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <link href="assets/js/jquery/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/dashboard.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <div class="page">
+      <div class="page-main">
+        <div class="header py-4">
+          <div class="container">
+            <div class="d-flex text-center">
+              <a class="header-brandm col-12" href="index.html">
+                <img src="./assets/images/logo.png" class="header-brand-img" alt="우리동네배달">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              
+              <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-lg-row">
+
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="fe fe-log-in"></i> 로그인</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="join.html" class="nav-link"><i class="fe fe-home"></i> 회원가입</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="order.html" class="nav-link"><i class="fe fe-home"></i> 주문하기</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="details.html" class="nav-link"><i class="fe fe-home"></i> 주문내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="affiliation.html" class="nav-link"><i class="fe fe-home"></i> 가맹회원</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="page-header">
+              <!-- page title start-->
+              <h1 class="page-title">
+                 가맹회원
+              </h1>
+              <!-- page title end-->
+            </div>
+
+            <!-- contents start -->
+            <div class="col-12">
+              <div class="row">
+                
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title" style="font-size: 1.2em; font-weight: bold;">가맹점등록</h3>
+                    </div>
+                    <div class="card-body1 p-5">
+                      <form>
+                        <div class="form-group col-12">
+                          <label class="form-label">가맹점분류</label>
+                          <select class="custom-select col-2">
+                            <option value="">가맹점분류선택</option> 
+                            <option value="">한식</option> 
+                            <option value="">중식</option>
+                            <option value="">일식</option> 
+                            <option value="">치킨</option>
+                            <option value="">피자</option> 
+                            <option value="">야식</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-12">
+                          <label class="form-label">가맹점로고</label>
+                          <input type="file" class="form-control">
+                        </div>
+
+                        <div class="form-group col-12">
+                          <label class="form-label">가맹점명</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-12">
+                          <img src="assets/images/test_logo.png">
+                          <strong>피자스타</strong>
+                        </div>
+                        <div class="form-footer col-12">
+                          <button type="submit" class="btn btn-primary btn-block">가맹점등록</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="card mt-7">
+                    <div class="card-header">
+                      <h3 class="card-title" style="font-size: 1.2em; font-weight: bold;">메뉴등록</h3>
+                    </div>
+                    <div class="card-body1 p-5">
+                      <form>
+                        <div class="form-group col-12">
+                          <label class="form-label">메뉴이름</label>
+                          <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group col-12">
+                          <label class="form-label">가격</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="form-footer col-12">
+                          <button type="submit" class="btn btn-primary btn-block">메뉴등록</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="card mt-7">
+                    <div class="card-header">
+                      <h3 class="card-title" style="font-size: 1.2em; font-weight: bold;">메뉴목록</h3>
+                    </div>
+                    <div class="card-body1 p-5">
+                      <div class="table-responsive">
+                      <table class="table table-bordered table-vcenter text-nowrap card-table menuTable" style="border-top: 1px solid rgba(0, 40, 100, 0.12)">
+                        <thead>
+                          <tr>
+                            <th>메뉴이름</th>
+                            <th>가격</th>
+                            <th>판매수량</th>
+                            <th>등록일</th>
+                            <th>메뉴삭제</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-center">
+                              쉬림프 피자
+                            </td>
+                            <td class="text-center">
+                             18,000원
+                            </td>
+                            <td class="text-center">
+                              320개 
+                            </td>
+                            <td class="text-center">
+                              2018-10-02
+                            </td>
+                            <td class="text-center">
+                              <button type="button" class="btn btn-secondary btn-space m-1">삭제</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">
+                              고구마무스 피자
+                            </td>
+                            <td class="text-center">
+                             23,000원
+                            </td>
+                            <td class="text-center">
+                              523개 
+                            </td>
+                            <td class="text-center">
+                              2018-10-01
+                            </td>
+                            <td class="text-center">
+                              <button type="button" class="btn btn-secondary btn-space m-1">삭제</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
+                  </div>
+
+
+                  <div class="card mt-7">
+                    <div class="card-header">
+                      <h3 class="card-title" style="font-size: 1.2em; font-weight: bold;">주문목록</h3>
+                    </div>
+                    <div class="card-body1 p-5">
+                      <div class="table-responsive">
+                      <table class="table table-bordered table-vcenter text-nowrap card-table" style="border-top: 1px solid rgba(0, 40, 100, 0.12)">
+                        <thead>
+                          <tr>
+                            <th>주문일자</th>
+                            <th>아이디</th>
+                            <th>성명</th>
+                            <th>전화번호</th>
+                            <th>위치정보</th>
+                            <th>메뉴이름</th>
+                            <th>수량</th>
+                            <th>가격</th>
+                            <th>총 합계</th>
+                            <th>주문상태</th>
+                          </tr>
+                        </thead>
+                        <tbody class="text-center">
+                          <tr>
+                            <td>2018-10-08</td>
+                            <td>user1</td>
+                            <td>사용자1</td>
+                            <td>1234-1234-1234</td>
+                            <td>(56,123)</td>
+                            <td>고구마무스 피자</td>
+                            <td>1개</td>
+                            <td>23,000원</td>
+                            <td>23,000원</td>
+                            <td>
+                              <button type="button" class="btn btn-secondary btn-space">배송</button>
+                            </td>
+                          </tr>
+                        
+                          <tr>
+                            <td rowspan="2">2018-10-07</td>
+                            <td rowspan="2">user1</td>
+                            <td rowspan="2">사용자1</td>
+                            <td rowspan="2">1234-1234-1234</td>
+                            <td rowspan="2">(56,123)</td>
+                            <td>고구마무스 피자</td>
+                            <td>2개</td>
+                            <td>23,000원</td>
+                            <td rowspan="2">92,000원</td>
+                            <td rowspan="2">배송완료</td>
+                          </tr>
+                          <tr>
+                            <td>고구마무스 피자</td>
+                            <td>2개</td>
+                            <td>23,000원</td>
+                          </tr>
+
+                          <tr>
+                            <td rowspan="2">2018-10-07</td>
+                            <td rowspan="2">user1</td>
+                            <td rowspan="2">사용자1</td>
+                            <td rowspan="2">1234-1234-1234</td>
+                            <td rowspan="2">(56,123)</td>
+                            <td>고구마무스 피자</td>
+                            <td>1개</td>
+                            <td>23,000원</td>
+                            <td rowspan="2">46,000원</td>
+                            <td rowspan="2">배송완료</td>
+                          </tr>
+                          <tr>
+                            <td>고구마무스 피자</td>
+                            <td>1개</td>
+                            <td>23,000원</td>
+                          </tr>
+
+                          <tr>
+                            <td rowspan="2">2018-10-06</td>
+                            <td rowspan="2">user1</td>
+                            <td rowspan="2">사용자1</td>
+                            <td rowspan="2">1234-1234-1234</td>
+                            <td rowspan="2">(56,123)</td>
+                            <td>쉬림프 피자</td>
+                            <td>1개</td>
+                            <td>18,000원</td>
+                            <td rowspan="2">41,000원</td>
+                            <td rowspan="2">배송완료</td>
+                          </tr>
+                          <tr>
+                            <td>고구마무스 피자</td>
+                            <td>1개</td>
+                            <td>23,000원</td>
+                          </tr>
+          
+
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <!-- 관리자모드 -->
+                  <div class="card mt-7">
+                    <div class="card-header">
+                      <h3 class="card-title" style="font-size: 1.2em; font-weight: bold;">가맹점 메뉴목록</h3>
+                      <div class="col text-right">
+                        <select class="custom-select col-2">
+                          <option value="">가맹회원선택</option>
+                          <option value="" selected="">피자스타</option>
+                          <option value="">도레미피자</option>
+                        </select>
+                        <button type="button" class="btn btn-secondary btn-space">확인</button>
+                      </div>
+                    </div>
+                    <div class="card-body1 p-5">
+                      <div class="table-responsive">
+                      <table class="table table-bordered table-vcenter text-nowrap card-table" style="border-top: 1px solid rgba(0, 40, 100, 0.12)">
+                        <thead>
+                          <tr>
+                            <th>메뉴이름</th>
+                            <th>가격</th>
+                            <th>판매수량</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-center">
+                              쉬림프 피자
+                            </td>
+                            <td class="text-center">
+                             18,000원
+                            </td>
+                            <td class="text-center">
+                              320개 
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">
+                              고구마무스 피자
+                            </td>
+                            <td class="text-center">
+                             23,000원
+                            </td>
+                            <td class="text-center">
+                              523개 
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="card mt-7">
+                    <div class="card-header">
+                      <h3 class="card-title" style="font-size: 1.2em; font-weight: bold;">메뉴랭킹</h3>
+                    </div>
+                    <div class="card-body1 p-5">
+                      <div class="table-responsive">
+                      <table class="table table-bordered table-vcenter text-nowrap card-table" style="border-top: 1px solid rgba(0, 40, 100, 0.12)">
+                        <thead>
+                          <tr>
+                            <th>랭킹</th>
+                            <th>가맹점명</th>
+                            <th>메뉴이름</th>
+                            <th>가격</th>
+                            <th>판매수량</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-center" style="width: 5%">
+                              1위
+                            </td>
+                            <td class="text-center">
+                             피자스타
+                            </td>
+                            <td class="text-center">
+                              고구마무스 피자 
+                            </td>
+                            <td class="text-center">
+                              23,000원
+                            </td>
+                            <td class="text-center">
+                              523개
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center" style="width: 5%">
+                              2위
+                            </td>
+                            <td class="text-center">
+                              피자스타
+                            </td>
+                            <td class="text-center">
+                              쉬림프 피자
+                            </td>
+                            <td class="text-center">
+                              18,000원
+                            </td>
+                            <td class="text-center">
+                              320개
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
+                  </div>
+
+
+
+                
+              </div>
+            </div>
+            <!-- contents end -->
+
+          </div>
+        </div>
+      </div>
+     
+      <footer class="footer">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-auto col-lg-auto mt-3 mt-lg-0 text-center">
+              Copyright © 2018 <a href="">우리동네배달</a> All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

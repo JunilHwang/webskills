@@ -33,7 +33,7 @@ class Animation {
 			timer += i.delay + (target.data('delay') ? parseInt(target.data('delay')) : 0)
 		})
 		i.lastTimer = timer
-		setTimeout(i.callback, i.lastTimer)
+		setTimeout(Animation.callback || i.callback, i.lastTimer)
 	}
 
 	clear () {
